@@ -170,12 +170,9 @@ def rpsm_loop():
 
 def fetch_proxies():
     url_list =[
-        "https://raw.githubusercontent.com/yemixzy/proxy-list/main/proxy-list/data.txt",
-        "https://raw.githubusercontent.com/UptimerBot/proxy-list/main/proxies/http.txt",
-        "https://raw.githubusercontent.com/rdavydov/proxy-list/main/proxies/http.txt",
-        "https://raw.githubusercontent.com/rdavydov/proxy-list/main/proxies/socks4.txt",
-        "https://raw.githubusercontent.com/rdavydov/proxy-list/main/proxies/socks5.txt"
-        
+        "https://api.proxyscrape.com/v2/?request=displayproxies&protocol=http&timeout=10000&country=all&ssl=all&anonymity=all", 
+    "https://api.proxyscrape.com/v2/?request=displayproxies&protocol=socks4&timeout=10000&country=all",
+    "https://api.proxyscrape.com/v2/?request=displayproxies&protocol=socks5&timeout=10000&country=all",
     ]
     for url in url_list :
         response = requests.get(
